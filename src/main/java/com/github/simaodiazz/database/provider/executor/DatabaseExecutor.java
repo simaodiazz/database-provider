@@ -147,4 +147,14 @@ public class DatabaseExecutor {
             }
         }, service);
     }
+
+    public void write() {
+        CompletableFuture.runAsync(() -> {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(command)) {
+                preparedStatement.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }, service);
+    }
 }
