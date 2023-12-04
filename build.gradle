@@ -20,5 +20,6 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
     implementation 'com.zaxxer:HikariCP:4.0.3'
 }
